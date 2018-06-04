@@ -14,6 +14,7 @@
 - [progress bar 进度条](https://github.com/Folgerjun/Ext.js-demos#progress-bar-%E8%BF%9B%E5%BA%A6%E6%9D%A1)
 - [Viewport](https://github.com/Folgerjun/Ext.js-demos#viewport)
 - [Window 窗口](https://github.com/Folgerjun/Ext.js-demos#window-%E7%AA%97%E5%8F%A3)
+- [资料参考](https://github.com/Folgerjun/extjs6-simple-examples#%E8%B5%84%E6%96%99%E5%8F%82%E8%80%83)
 ---
 
 ## box 弹出框
