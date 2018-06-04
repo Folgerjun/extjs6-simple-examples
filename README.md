@@ -86,3 +86,8 @@
 
 ## Window 窗口
 - 窗口 [Window](ExtJs/Window.html) <br> ![](ExtJsImg/Window.gif)
+
+---
+
+## 资料参考
+- [W3Cschool](https://www.w3cschool.cn/extjs/)
