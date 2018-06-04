@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create('Ext.container.Container', {
+            renderTo : Ext.getBody(),
+            layout : {
+               type :'table', // 表：由于名称意味着此布局以HTML表格式在容器中排列组件。
+               columns : 3,
+               tableAttrs: {
+                  style: {
+                     width: '100%'
+                  }
+               }               
+            },
+            width:600,
+            height:200,
+            items : [{
+               title : 'Panel1',
+               html : 'This panel has colspan = 2',
+               colspan :2
+            },{
+               title : 'Panel2',
+               html : 'This panel has rowspan = 2',
+               rowspan: 2
+            },{
+               title : 'Panel3',
+               html : 'This is panel 3'
+            },{
+               title : 'Panel4',
+               html : 'This is panel 4'
+            },{
+               title : 'Panel5',
+               html : 'This is panel 5'
+            }]
+         });
+      });
+   </script>
+</head>
+<body>
+</body>
+</html>

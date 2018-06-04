@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create('Ext.container.Container', {
+            renderTo : Ext.getBody(),
+            layout : 'anchor' , // 锚点：此布局给予用户给出每个元素相对于容器大小的大小的特权。
+            width : 600,
+            items : [{
+               title : 'Panel 1',
+               html : 'panel 1',
+               height : 100,
+               anchor : '50%'
+            },{
+               title : 'Panel 2',
+               html : 'panel 2',
+               height : 100,
+               anchor : '100%'
+            },{
+               title : 'Panel 3',
+               html : 'panel 3',
+               height : 100,
+               anchor : '-100'
+            },{
+               title : 'Panel 4',
+               html : 'panel 4',
+               anchor : '-70, 500'
+            }]
+         });
+      });
+   </script>
+</head>
+<body>
+</body>
+</html>

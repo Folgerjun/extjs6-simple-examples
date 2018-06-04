@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/packages/charts/classic/charts.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create({
+            xtype: 'draw',
+            renderTo: Ext.getBody(),
+            width: 400,
+            height: 400,
+            sprites: [{
+               type: 'rect',
+               height : 200,
+               width: 200,
+               fill: 'red',
+               translate: { // 转化属性用于在绘制图形时在x和y中进行转化。
+                  x:10, // 改变该值变化位置
+                  y:10
+               }
+            }],
+         });
+      });
+   </script>
+</head>
+<body>
+</body>
+</html>

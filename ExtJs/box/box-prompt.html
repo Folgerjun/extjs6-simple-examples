@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create('Ext.Button', {
+            renderTo: Ext.getElementById('msgBox'),
+            text: 'Click Me',
+            listeners: {
+               click: function() {
+                  Ext.Msg.prompt('Name', 'Please enter your name:', function(btn, text){ // 此消息框提示用户输入。 它是一个单行用户输入
+                     if (btn == 'ok'){
+                        if(text == "") { // 判断输入的值  做对应操作
+                           Ext.Msg.alert('check !!!!');
+                        }else {
+                           Ext.Msg.alert('Hello', 'Hello '+text);
+                        }
+                     }
+                  });
+               }
+            }
+         });
+      });
+   </script>
+</head>
+<body>
+   <p> Click the button for alert box </p>
+   <div id = "msgBox" ></div>
+</body>
+</html>

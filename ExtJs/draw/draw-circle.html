@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/packages/charts/classic/charts.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create({
+            xtype: 'draw',
+            sprites: [{
+               type: 'circle', // 创建圆形。
+               fillStyle: 'red', // 红色
+               r: 100, // 半径
+               cx: 100, // 半径坐标
+               cy: 100
+            }],
+            height:205,
+            width:205,
+            renderTo:Ext.getBody()
+         });
+      });
+   </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function () {
+         var childPanel1 = Ext.create('Ext.panel.Panel', {
+             title: 'Child Panel 1',
+             html: 'A Panel'
+         });
+
+         var childPanel2 = Ext.create('Ext.panel.Panel', {
+             title: 'Child Panel 2',
+             html: 'Another Panel'
+         });
+
+         Ext.create('Ext.container.Viewport', { // Viewport是一个容器，它会自动调整大小到整个浏览器窗口的大小
+         renderTo: Ext.getBody(),
+             items: [ childPanel1, childPanel2 ] // 添加组件和容器
+         });
+      });
+   </script>
+</head>
+<body>
+</body>
+</html>

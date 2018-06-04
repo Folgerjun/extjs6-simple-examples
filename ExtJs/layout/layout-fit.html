@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create('Ext.container.Container', {
+            renderTo : Ext.getBody(),
+            layout : {
+               type :'fit'	 // 适合：在此布局中，容器用单个面板填充，当没有与布局相关的特定要求时，则使用此布局。
+            },
+            width : 600,
+            defaults: {
+               bodyPadding: 15
+            },
+            items : [{
+               title: 'Panel1',
+               html : 'This is panel 1'
+            },{
+               title: 'Panel2',
+               html : 'This is panel 2'
+            },{
+               title: 'Panel3',
+               html : 'This is panel 3'
+            },{
+               title: 'Panel4',
+               html : 'This is panel 4'
+            }]
+         });
+      });
+   </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create('Ext.container.Container', {
+            renderTo : Ext.getBody(),
+            layout : 'auto', // 自动：这是默认布局，根据元素数量决定元素的布局。
+            width : 600,
+            items : [{
+               title: 'First Component',
+               html : 'This is First Component'
+            },{ 
+               title: 'Second Component',
+               html : 'This is Second Component'
+            },{ 
+               title: 'Third Component',
+               html : 'This is Third Component' 
+            },{ 
+               title: 'Fourth Component',
+               html : 'This is Fourth Component'
+            }]
+         });
+      });
+   </script>
+</head>
+<body>
+</body>
+</html>

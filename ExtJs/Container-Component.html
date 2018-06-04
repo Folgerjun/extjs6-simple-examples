@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function () {
+         var component1 = Ext.create('Ext.Component', { // 创建组件
+            html:'First Component'
+         });
+
+         var component2 = Ext.create('Ext.Component', {
+            html: 'Second Component'
+         });
+
+         var component3 = Ext.create('Ext.Component', {
+            html: 'Third Component'
+         });
+
+         var component4 = Ext.create('Ext.Component', {
+            html: 'Fourth Component'
+         });
+
+         var component5 = Ext.create('Ext.Component', {
+            html: 'Fifth Component'
+         });
+
+         var container = Ext.create('Ext.container.Container', { // 创建容器加入组件
+                     style: {borderStyle: 'solid', borderWidth: '2px' },
+                     width: '50%',
+                     items: [component4, component5]
+         });
+
+         Ext.create('Ext.container.Container', { // Container容器中加入组件
+            renderTo: Ext.getBody(),
+            title: 'Container',
+            border: 1,
+            width: '50%',
+            style: {borderStyle: 'solid', borderWidth: '2px' },
+            items: [component1, component2,  component3, container] // 容器中加入组件 加入容器
+         });
+      });
+   </script>
+</head>
+<body>
+</body>
+</html>

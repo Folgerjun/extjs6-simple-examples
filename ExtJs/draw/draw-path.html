@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/packages/charts/classic/charts.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create({
+            xtype: 'draw',
+            renderTo: Ext.getBody(),
+            width: 300,
+            height:200,
+            sprites: [{
+               type: 'path', // 用于创建freepath。
+               path: 'M150 0 L25 100 L250 100 Z',
+               strokeStyle: '#333',
+               fill: 'green',
+               lineWidth: 2
+            }]
+         }); 
+      });
+   </script>
+</head>
+<body>
+</body>
+</html>

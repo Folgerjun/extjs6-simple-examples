@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/packages/charts/classic/charts.js"></script>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/packages/charts/classic/classic/resources/charts-all.css" rel="stylesheet" />
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create('Ext.chart.PolarChart', {
+             renderTo: document.body,
+             width: 600,
+             height: 300,
+             store: {
+                 fields: ['name', 'g1'],
+                 data: [
+                     {"name": "Item-0", "g1": 57},
+                     {"name": "Item-1", "g1": 45},
+                     {"name": "Item-2", "g1": 67}
+                 ]
+             },
+
+             //configure the legend.
+             legend: {
+                 docked: 'bottom'
+             },
+
+             //describe the actual pie series.
+             series: [{
+                 type: 'pie', // 此图表用于表示饼图格式的数据。它是一个极坐标图。
+                 xField: 'g1', // 数据字段
+                 label: {
+                     field: 'name' // 分类字段
+                 },
+                 donut: 30 // increase or decrease for increasing or decreasing donut area in middle.  中间空出的面积
+             }]
+         });
+      });
+   </script>
+</head>
+<body>
+</body>
+</html>

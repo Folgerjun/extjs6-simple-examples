@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create('Ext.container.Container', {
+            renderTo: Ext.getBody(),
+            layout: 'absolute' , // 绝对：此布局允许使用容器中的XY坐标定位项目。
+            items: [{
+               title: 'Panel 1',
+               x: 50, // 指定位置
+               y: 50,
+               html: 'Positioned at x:50, y:50',
+               width: 500,
+               height: 100
+            },{
+               title: 'Panel 2',
+               x: 100,
+               y: 95,
+               html: 'Positioned at x:100, y:95',
+               width: 500,
+               height: 100
+            }]
+         });
+      });
+   </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create('Ext.form.Panel', { // 创建表单
+            id: 'newForm',
+            renderTo: 'formId',
+            border: true,
+            width: 600,
+            items: [{
+               xtype: 'textfield', // 表示用户可以输入值的文本字段
+               fieldLabel: 'Text Field'
+            },{
+               xtype: 'displayfield', // 表示一个显示文本字段
+               fieldLabel: 'Display Field'
+            },{
+               xtype: 'textarea', // 表示一个文本区域
+               fieldLabel: 'Text Area'
+            },{
+               xtype: 'datefield', // 表示一个日期字段
+               fieldLabel: 'Date picker'
+            },{
+               xtype: 'button', // 这是一个按钮
+               text: 'Button'
+            },{
+               xtype: 'fieldcontainer', // 表示一个无线电字段，我们可以在所有单选按钮中选择任何一个，或者可以自定义一次选择多个
+               fieldLabel: 'Radio field',
+               defaultType: 'radiofield',
+               defaults: {
+                  flex: 1
+               },
+               layout: 'hbox',
+               items: [{
+                  boxLabel: 'A',
+                  inputValue: 'a',
+                  id: 'radio1'
+               },{
+                  boxLabel: 'B',
+                  inputValue: 'b',
+                  id: 'radio2'
+               },{
+                  boxLabel: 'C',
+                  inputValue: 'c',
+                  id: 'radio3'
+               }]
+            },{
+               xtype: 'fieldcontainer', // 这是一个复选框字段，我们可以一次选择多个值
+               fieldLabel: 'Check Box Field',
+               defaultType: 'checkboxfield',
+               items: [{
+                  boxLabel: 'HTML',
+                  inputValue: 'html',
+                  id: 'checkbox1'
+               },{
+                  boxLabel: 'CSS',
+                  inputValue: 'css',
+                  checked: true,  // 是否选中
+                  id: 'checkbox2'
+               },{
+                  boxLabel: 'JavaScript',
+                  inputValue: 'js',
+                  id: 'checkbox3'
+               }]
+            },{
+               xtype: 'hiddenfield', // 作为名称解释这个xtype是保持值隐藏。
+               name: 'hidden field ',
+               value: 'value from hidden field'
+            },{
+               xtype: 'numberfield', // 为了表示一个数字字段，其中我们可以预先定义max和min值
+               anchor: '100%',
+               fieldLabel: 'Numeric Field',
+               maxValue: 99,
+               minValue: 0
+            },{
+               xtype: 'spinnerfield', // 这是一个微调字段，其中列表可以旋转和添加
+               fieldLabel: 'Spinner Field',
+               step: 6,
+               // override onSpinUp (using step isn't neccessary)
+               onSpinUp: function() {
+                 var me = this;
+                 if (!me.readOnly) {
+                     var val = me.step; // set the default value to the step value
+                     if(me.getValue() !== '') {
+                        val = parseInt(me.getValue().slice(0, -5)); // gets rid of " Pack" 截取数字
+                     }                          
+                     me.setValue((val + me.step) + ' Pack');
+                 }
+               },
+
+               // override onSpinDown
+               onSpinDown: function() {
+                 var me = this;
+                 if (!me.readOnly) {
+                     if(me.getValue() !== '') {
+                         val = parseInt(me.getValue().slice(0, -5)); // gets rid of " Pack"
+                     }            
+                     me.setValue((val - me.step) + ' Pack');
+                 }
+               }
+            },{
+               xtype: 'timefield', // 表示一个时间字段，其中可以预定义最大和最小时间值
+               fieldLabel: 'Time field',
+               minValue: '6:00 AM',
+               maxValue: '8:00 PM',
+               increment: 30,
+               anchor: '100%'
+            },{
+               xtype: 'combobox', // 这是一个组合框。 组合框包含项目列表
+               fieldLabel: 'Combo Box',
+               store: Ext.create('Ext.data.Store', {
+                        fields: ['abbr', 'name'],
+                        data: [{
+                           'abbr': 'HTML',
+                           'name': 'HTML'
+                        },{
+                           'abbr': 'CSS',
+                           'name': 'CSS'
+                        },{
+                           'abbr': 'JS',
+                           'name': 'JavaScript'
+                        }]
+                     }),
+               valueField: 'abbr',
+               displayField: 'name'
+            },{
+               xtype: 'filefield', // 一个文件上传字段，我们可以浏览和上传文件
+               fieldLabel: 'File field',
+               labelWidth: 50,
+               msgTarget: 'side',
+               allowBlank: false,
+               anchor: '100%',
+               buttonText: 'Select File...'
+            }]
+         });
+      });
+   </script>
+</head>
+<body>
+   <div id = "formId"></div>
+</body>
+</html>

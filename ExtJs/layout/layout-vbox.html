@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create('Ext.panel.Panel', {
+            renderTo : Ext.getBody(),
+            layout : {
+               type :'vbox', // vbox：此布局允许元素以垂直方式分布。 这是最常用的布局之一。
+               align: 'stretch'               
+            },
+            requires: ['Ext.layout.container.VBox'],
+            xtype: 'layout-vertical-box',
+            width : 600,
+            height :400,
+            frame :true,
+            items : [{
+               title: 'Panel 1',
+               html : 'Panel with flex 1',
+               margin: '0 0 10 0',
+               flex : 1
+            },{
+               title: 'Panel 2',
+               html : 'Panel with flex 2',
+               margin: '0 0 10 0',
+               flex : 2
+            },{
+               title: 'Panel 3',
+               flex : 2,
+               margin: '0 0 10 0',
+               html : 'Panel with flex 2'
+            },{
+               title: 'Panel 4',
+               html : 'Panel with flex 1',
+               margin: '0 0 10 0',
+               flex : 1
+            }]
+         });
+      });
+   </script>
+</head>
+<body>
+</body>
+</html>

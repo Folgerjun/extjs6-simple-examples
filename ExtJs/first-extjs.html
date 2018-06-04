@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+      <link rel = "stylesheet" type ="text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-crisp/resources/theme-crisp-all.css" / >
+      <script type ="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js" > </script>
+      <script type="text/javascript">
+         Ext.onReady(function() { // Ext JS准备好渲染Ext JS元素时调用
+         Ext.create('Ext.Panel', { // Ext JS中创建Panel对象
+            renderTo: 'helloWorldPanel', // 对应id
+            height: 100,
+            width: 200,
+            title: 'Hello world',
+            html: 'First Ext JS Hello World Program'
+            });
+         });
+      </script>
+   </head>
+   <body>
+      <div id="helloWorldPanel"></div>
+   </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+      <script type="text/javascript">
+         Ext.onReady(function(){
+            var button = Ext.create('Ext.Button', {
+               renderTo: Ext.getElementById('helloWorldPanel'),
+               text: 'My Button',
+               listeners: {
+                  myEvent: function(button) { // 自定义事件
+                     Ext.MessageBox.alert('Alert box', 'My custom event is called');
+                  }
+               }
+            });
+            Ext.defer(function() { // 延迟5s触发事件
+               button.fireEvent('myEvent'); // fireEvent方法触发事件
+            }, 5000);
+         }); 
+      </script> 
+   </head>
+   <body>
+      <p> The event will be called after 5 seconds when the page is loaded. </p>
+      <div id = 'helloWorldPanel' />   <!--  panel will be rendered here-- >
+   </body>
+</html>

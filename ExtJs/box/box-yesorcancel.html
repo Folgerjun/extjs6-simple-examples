@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create('Ext.Button', {
+            renderTo: Ext.getElementById('msgBox'),
+            text: 'Click Me',
+            listeners: {
+               click: function() {
+                  Ext.MessageBox.show({
+                     title: 'Details',
+                     msg: 'Please enter your details:',
+                     width:300,
+                     buttons: Ext.MessageBox.YESNOCANCEL, // yes or no or cancel 
+                     multiline: true,
+                     fn: callbackFunction
+                  });
+
+                  function callbackFunction (btn,text){
+                     console.log(btn) // yes or no or cancel 
+                     console.log(text) // 输入文本值
+                     Ext.Msg.alert('status', 'Details entered succesfully');
+                  }
+               }
+            }
+         });
+      });
+   </script>
+</head>
+<body>
+   <p> Click the button for alert box </p>
+   <div id = "msgBox" ></div>
+</body>
+</html>

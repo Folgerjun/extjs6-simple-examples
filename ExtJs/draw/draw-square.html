@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/packages/charts/classic/charts.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create({
+            xtype: 'draw',
+            renderTo: Ext.getBody(),
+            width: 300,
+            height:200,
+            sprites: [{
+               type: 'square', // 用于创建正方形
+               height: 100,
+               width: 100,
+               fill: 'green'
+            }]
+         }); 
+      });
+   </script>
+</head>
+<body>
+</body>
+</html>

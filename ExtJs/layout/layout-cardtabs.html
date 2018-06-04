@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create('Ext.tab.Panel', {
+            renderTo: Ext.getBody(),
+            requires: ['Ext.layout.container.Card'],
+            xtype: 'layout-cardtabs', // 此布局以制表符方式排列不同的组件。 选项卡将显示在容器的顶部。每次只有一个选项卡可见，每个选项卡被视为不同的组件。
+            width: 600,
+            height: 200,
+            items:[{
+               title: 'Tab 1',
+               html:   'This is first tab.'
+            },{
+               title: 'Tab 2',
+               html: 'This is second tab.'
+            },{
+               title: 'Tab 3',
+               html: 'This is third tab.'
+            }]
+         });
+      });
+   </script>
+</head>
+<body>
+</body>
+</html>

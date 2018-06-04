@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/packages/charts/classic/charts.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create({
+            xtype: 'draw',
+            renderTo: Ext.getBody(),
+            width: 600,
+            height: 200,
+            sprites: [{
+                type: 'text', // 这种类型的绘制元素用于绘制任何文本。
+                x: 200,
+                y: 100,
+                text: 'ExtJS Tutorials',
+                fontSize: 30,
+                fillStyle: 'green'
+            }]
+         });
+      });
+   </script>
+</head>
+<body>
+</body>
+</html>

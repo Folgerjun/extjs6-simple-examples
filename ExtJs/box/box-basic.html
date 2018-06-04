@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create('Ext.Button', { // 创建按钮
+            renderTo: Ext.getElementById('msgBox'),
+            text: 'Click Me',
+            listeners: {
+               click: function() { // 监听点击事件
+                  Ext.Msg.alert('Title', 'Basic message box in ExtJS'); // 这是最简单的警报框只是为了显示一些事件的一些信息。
+               }
+            }
+         });
+      });
+   </script>
+</head>
+<body>
+   <p> Click the button for alert box </p>
+   <div id = "msgBox" ></div>
+</body>
+</html>

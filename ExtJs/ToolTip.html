@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         toolTip = new Ext.ToolTip({       
+            id : 'toolTip',
+            anchor : 'bottom',
+            html : 'This is a basic toolTip',
+            title : 'Tool - Tip Title',
+            closable : true,
+            closeAction : 'hide'
+         });
+        Ext.create('Ext.Button', {
+            renderTo: Ext.getElementById('buttonId'),
+            text: 'Hover Me',
+            listeners: {
+               mouseover: function() { // 鼠標放上去触发
+                  toolTip.show();
+               }
+            }
+         });
+      });
+   </script>
+</head>
+<body>
+   <div id = "buttonId"></div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+   <script type="text/javascript">
+      Ext.onReady(function() {
+         Ext.create('Ext.form.HtmlEditor', { // HTML编辑器：这个Ext JS UI小部件是创建一个html编辑器，以便用户可以编辑它在字体，颜色，大小等方面输入的信息。
+            width: 580,
+            height: 250,
+            renderTo: document.getElementById('editorId')
+         });
+      });
+   </script>
+</head>
+<body>
+   <div id = "editorId"></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+<!--静态数据存放-->
+<!--
+Ext.create('Ext.data.Store', {
+      model: 'StudentDataModel',
+      data: [
+         { name : "Asha", age : "16", marks : "90" },
+         { name : "Vinit", age : "18", marks : "95" },
+         { name : "Anand", age : "20", marks : "68" },
+         { name : "Niharika", age : "21", marks : "86" },
+         { name : "Manali", age : "22", marks : "57" }
+      ];
+   });
+
+-->
+
+
+
+<!--使用代理获取动态数据-->
+<!--
+Ext.create('Ext.data.Store', {
+   model: 'StudentDataModel',
+   proxy : {
+      type : 'rest',
+      actionMethods : {
+         read : 'POST'  // Get or Post type based on requirement
+      },
+      url : 'restUrlPathOrJsonFilePath', // here we have to include the rest URL path which fetches data from database or Json file path where the data is stored
+      reader: {
+         type : 'json',  // the type of data which is fetched is of JSON type
+         root : 'data'
+      },
+   }
+});
+-->
